@@ -36,6 +36,7 @@ defmodule Napolleon.MixProject do
       {:mox, "~> 1.0", only: :test},
       {:mix_test_interactive, "~> 1.0", only: :dev, runtime: false},
       {:bypass, "~> 2.1", only: :test},
+      {:httpoison, "~> 1.8"},
       {:phoenix, "~> 1.5.8"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
