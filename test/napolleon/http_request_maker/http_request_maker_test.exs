@@ -20,8 +20,7 @@ defmodule Napolleon.HTTPRequestMakerTest do
       :url => "example.com"
     }
 
-    {:ok, response} =
-      Napolleon.HTTPRequestMaker.make_request_closure(from: payload_input).()
+    {:ok, response} = Napolleon.HTTPRequestMaker.make_request_closure(from: payload_input).()
 
     assert response.status_code == 200
   end
