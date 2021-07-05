@@ -7,7 +7,7 @@ defmodule Napolleon.HTTPRequestMakerTest do
   end
 
   test "Simple GET request" do
-    PollingToSocket.MockHTTPoison
+    Napolleon.MockHTTPoison
     |> expect(:get, fn _url ->
       {:ok,
        %{
@@ -21,7 +21,7 @@ defmodule Napolleon.HTTPRequestMakerTest do
     }
 
     {:ok, response} =
-      PollingToSocket.HTTPRequestMaker.make_request_closure(from: payload_input).()
+      Napolleon.HTTPRequestMaker.make_request_closure(from: payload_input).()
 
     assert response.status_code == 200
   end
