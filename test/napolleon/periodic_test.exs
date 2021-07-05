@@ -14,7 +14,7 @@ defmodule Napolleon.PeriodicTest do
       id: self()
     }
 
-    GenServer.start_link(PollingToSocket.Periodically, args)
+    GenServer.start_link(Napolleon.Periodically, args)
 
     # Wait > 10ms for the response
     Enum.each(1..random_number, fn x ->
