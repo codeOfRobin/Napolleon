@@ -3,7 +3,7 @@ defmodule Napolleon.HTTPRequestMakerTest do
   use ExUnit.Case
 
   setup do
-    Application.put_env(:polling_to_socket, :http_client, Napolleon.MockHTTPoison)
+    Application.put_env(:napolleon, :http_client, Napolleon.MockHTTPoison)
   end
 
   test "Simple GET request" do
