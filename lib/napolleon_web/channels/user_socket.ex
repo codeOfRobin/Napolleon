@@ -2,7 +2,7 @@ defmodule NapolleonWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", NapolleonWeb.RoomChannel
+  channel "poll:*", NapolleonWeb.PollChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
